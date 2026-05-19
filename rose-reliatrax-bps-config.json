@@ -1,0 +1,1740 @@
+{
+  "project": "Rose ReliaTrax BPS Automation",
+  "version": "0.3.0",
+  "updated": "2026-05-18",
+  "selector": "textarea.qn-textarea, input.qn-editable-cb",
+  "expectedFieldCount": 264,
+  "defaultsOverwriteExisting": true,
+  "autoDefaultAnswers": {},
+  "prompts": [
+    {
+      "id": "prompt1",
+      "title": "Prompt 1: Living, Substance, Tobacco, Withdrawal, Treatment",
+      "body": "You are preparing structured data for a Biopsychosocial Assessment form. CRITICAL RULES: 1. Return VALID JSON only. 2. Do NOT use markdown. 3. Do NOT include commentary. 4. Do NOT include trailing commas. 5. Do NOT invent, infer, or assume. 6. If not explicitly stated, use \"\" (empty string). 7. Keep answers concise and form-ready. 8. For yes/no fields use only: \"yes\", \"no\", or \"\". 9. For checkbox fields use true or false only. 10. JSON must successfully parse with JSON.parse(). Return ONLY this JSON structure: { \"living_situation\": { \"referral_source\": \"\", \"reason_for_services\": \"\", \"current_living_location\": \"\", \"same_or_different_than_current_location\": \"\", \"living_with\": \"\" }, \"substance_use\": { \"no_history\": false, \"substance_1\": { \"substance\": \"\", \"age_first_use\": \"\", \"amount_used\": \"\", \"frequency_used\": \"\", \"tolerance\": \"\", \"method\": \"\", \"last_use_date\": \"\", \"days_used_last_30\": \"\", \"recent_pattern\": \"\", \"behavioral_changes\": \"\", \"consequences\": \"\", \"sees_use_as_problem\": \"\", \"tried_to_quit\": \"\", \"sober_duration\": \"\" }, \"substance_2\": { \"substance\": \"\", \"age_first_use\": \"\", \"amount_used\": \"\", \"frequency_used\": \"\", \"tolerance\": \"\", \"method\": \"\", \"last_use_date\": \"\", \"days_used_last_30\": \"\", \"recent_pattern\": \"\", \"behavioral_changes\": \"\", \"consequences\": \"\", \"sees_use_as_problem\": \"\", \"tried_to_quit\": \"\", \"sober_duration\": \"\" }, \"substance_3\": { \"substance\": \"\", \"age_first_use\": \"\", \"amount_used\": \"\", \"frequency_used\": \"\", \"tolerance\": \"\", \"method\": \"\", \"last_use_date\": \"\", \"days_used_last_30\": \"\", \"recent_pattern\": \"\", \"behavioral_changes\": \"\", \"consequences\": \"\", \"sees_use_as_problem\": \"\", \"tried_to_quit\": \"\", \"sober_duration\": \"\" }, \"other_substances\": \"\" }, \"tobacco\": { \"no_history\": false, \"uses_tobacco_or_vapes\": \"\", \"vape_contains_nicotine\": \"\", \"amount_and_frequency\": \"\", \"considers_problem\": \"\", \"wants_to_quit_now\": \"\", \"tried_to_quit_past\": \"\" }, \"withdrawal\": { \"no_history\": false, \"experienced_withdrawal\": \"\", \"symptoms\": \"\", \"seizure_due_to_withdrawal\": \"\", \"symptom_duration\": \"\", \"onset_after_last_use\": \"\", \"management\": \"\" }, \"previous_substance_use_treatment\": { \"treatment_history_summary\": \"\", \"detox_count\": \"\", \"inpatient_residential_count\": \"\", \"outpatient_count\": \"\", \"support_groups_experience\": \"\", \"sponsor_or_mentor\": \"\", \"support_group_experience_description\": \"\" } }"
+    },
+    {
+      "id": "prompt2",
+      "title": "Prompt 2: Mental Health, Risk, Trauma, Violence",
+      "body": "Prompt2: You are preparing structured data for a Biopsychosocial Assessment form. CRITICAL RULES: 1. Return VALID JSON only. 2. Do NOT use markdown. 3. Do NOT include commentary. 4. Do NOT include trailing commas. 5. Do NOT invent, infer, or assume. 6. If not explicitly stated, use \"\" (empty string). 7. Keep answers concise and form-ready. 8. For yes/no fields use only: \"yes\", \"no\", or \"\". 9. For checkbox fields use true or false only. 10. JSON must successfully parse with JSON.parse(). Return ONLY this JSON structure: { \"mental_health\": { \"no_history\": false, \"diagnosis_history\": \"\", \"age_diagnosed\": \"\", \"diagnosed_by\": \"\", \"agrees_with_diagnosis\": \"\", \"using_substances_at_diagnosis\": \"\", \"substance_use_impacted_diagnosis\": \"\" }, \"mental_health_treatment\": { \"psychiatric_hospitalizations\": \"\", \"currently_working_with_psychiatrist\": \"\", \"currently_working_with_therapist\": \"\", \"mental_health_professionals_contact\": \"\", \"not_interested_in_resources\": false }, \"symptoms_suicide_self_harm\": { \"current_symptoms\": \"\", \"hallucinations\": \"\", \"eating_disorder_history\": \"\", \"current_suicidal_ideation\": \"\", \"plan_to_end_life\": \"\", \"means_or_plan_to_obtain_means\": \"\", \"history_suicidal_ideation\": \"\", \"history_suicide_attempts\": \"\", \"attempt_count\": \"\", \"history_self_harm\": \"\", \"risk_harming_self\": \"\", \"risk_harming_self_reason\": \"\" }, \"trauma_grief\": { \"trauma_history\": \"\", \"trauma_current_impact\": \"\", \"interested_in_trauma_treatment\": \"\", \"current_grief_or_loss\": \"\", \"grieving_what\": \"\" }, \"violence\": { \"history_violent_behavior\": \"\", \"current_thoughts_hurting_others\": \"\", \"perpetrator_domestic_abuse\": \"\", \"current_risk_for_violence\": \"\", \"violence_risk_reason\": \"\" } }"
+    },
+    {
+      "id": "prompt3",
+      "title": "Prompt 3: Legal, Family, Spiritual, Medical, Meds",
+      "body": "You are preparing structured data for a Biopsychosocial Assessment form. CRITICAL RULES: 1. Return VALID JSON only. 2. Do NOT use markdown. 3. Do NOT include commentary. 4. Do NOT include trailing commas. 5. Do NOT invent, infer, or assume. 6. If not explicitly stated, use \"\" (empty string). 7. Keep answers concise and form-ready. 8. For yes/no fields use only: \"yes\", \"no\", or \"\". 9. For checkbox fields use true or false only. 10. JSON must successfully parse with JSON.parse(). Return ONLY this JSON structure: { \"legal\": { \"offense_history_summary\": \"\", \"lifetime_arrest_count\": \"\", \"sex_crime_conviction\": \"\", \"arrest_results\": \"\", \"current_warrants\": \"\", \"probation_or_parole\": \"\" }, \"family\": { \"mother_relationship\": \"\", \"father_relationship\": \"\", \"has_siblings\": \"\", \"growing_up_experience\": \"\" }, \"spiritual_cultural\": { \"religion_affiliation\": \"\", \"active_in_religion\": \"\", \"culture_values_raised_with\": \"\", \"childhood_socioeconomic_status\": \"\" }, \"medical\": { \"current_physical_health_problems\": \"\", \"pain_issues\": \"\", \"pain_location\": \"\", \"pain_start\": \"\", \"pain_helpers\": \"\", \"pain_functioning_impact\": \"\", \"used_opiates_for_pain\": \"\", \"has_primary_care\": \"\", \"last_full_physical\": \"\", \"allergies\": \"\", \"dental_problems\": \"\" }, \"medications\": { \"medication_1\": { \"name\": \"\", \"dosage_frequency\": \"\", \"side_effects\": \"\", \"currently_taking\": \"\" }, \"medication_2\": { \"name\": \"\", \"dosage_frequency\": \"\", \"side_effects\": \"\", \"currently_taking\": \"\" } } }"
+    },
+    {
+      "id": "prompt4",
+      "title": "Prompt 4: Sexual, Vocational, Education, Military, Strengths",
+      "body": "You are preparing structured data for a Biopsychosocial Assessment form. CRITICAL RULES: 1. Return VALID JSON only. 2. Do NOT use markdown. 3. Do NOT include commentary. 4. Do NOT include trailing commas. 5. Do NOT invent, infer, or assume. 6. If not explicitly stated, use \"\" (empty string). 7. Keep answers concise and form-ready. 8. For yes/no fields use only: \"yes\", \"no\", or \"\". 9. For checkbox fields use true or false only. 10. JSON must successfully parse with JSON.parse(). Return ONLY this JSON structure: { \"sexual_history\": { \"practices_safe_sex\": \"\", \"partners_last_year\": \"\", \"substance_use_impacted_sex_life\": \"\", \"tested_std_hepatitis_hiv\": \"\" }, \"vocational\": { \"currently_working\": \"\", \"looking_for_work\": \"\", \"employment_start_date\": \"\", \"financial_state\": \"\", \"highest_education\": \"\" }, \"current\": { \"marital_status\": \"\", \"relationship_description\": \"\", \"children_count\": \"\", \"recovery_support_people\": \"\" }, \"hobbies_activities\": { \"fun_activities\": \"\", \"substance_use_impacted_activities\": \"\" }, \"additional_addiction_questions\": { \"gambling_concerns\": \"\", \"technology_use_concerns\": \"\" }, \"strengths_challenges\": { \"personal_challenge\": \"\", \"personal_strengths\": \"\" } }"
+    }
+  ],
+  "fieldMap": [
+    {
+      "paths": [
+        "living_situation.referral_source"
+      ],
+      "fillIndex": 0
+    },
+    {
+      "paths": [
+        "living_situation.reason_for_services"
+      ],
+      "fillIndex": 1
+    },
+    {
+      "paths": [
+        "living_situation.current_living_location"
+      ],
+      "fillIndex": 2
+    },
+    {
+      "paths": [
+        "living_situation.living_with"
+      ],
+      "fillIndex": 3
+    },
+    {
+      "paths": [
+        "substance_use.no_history"
+      ],
+      "fillIndex": 4
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.age_first_use"
+      ],
+      "fillIndex": 5
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.amount_used"
+      ],
+      "fillIndex": 6
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.frequency_used"
+      ],
+      "fillIndex": 7
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.tolerance"
+      ],
+      "fillIndex": 8
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.method"
+      ],
+      "fillIndex": 9
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.last_use_date"
+      ],
+      "fillIndex": 10
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.days_used_last_30"
+      ],
+      "fillIndex": 11
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.recent_pattern"
+      ],
+      "fillIndex": 12
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.behavioral_changes"
+      ],
+      "fillIndex": 13
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.consequences"
+      ],
+      "fillIndex": 14
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.sees_use_as_problem.yes",
+        "substance_use.substance_1.problem_yes"
+      ],
+      "fillIndex": 15
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.sees_use_as_problem.no",
+        "substance_use.substance_1.problem_no"
+      ],
+      "fillIndex": 16
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.tried_to_quit.yes",
+        "substance_use.substance_1.tried_to_quit_yes"
+      ],
+      "fillIndex": 17
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.tried_to_quit.no",
+        "substance_use.substance_1.tried_to_quit_no"
+      ],
+      "fillIndex": 18
+    },
+    {
+      "paths": [
+        "substance_use.substance_1.sober_duration"
+      ],
+      "fillIndex": 19
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.age_first_use"
+      ],
+      "fillIndex": 20
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.amount_used"
+      ],
+      "fillIndex": 21
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.frequency_used"
+      ],
+      "fillIndex": 22
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.tolerance"
+      ],
+      "fillIndex": 23
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.method"
+      ],
+      "fillIndex": 24
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.last_use_date"
+      ],
+      "fillIndex": 25
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.days_used_last_30"
+      ],
+      "fillIndex": 26
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.recent_pattern"
+      ],
+      "fillIndex": 27
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.behavioral_changes"
+      ],
+      "fillIndex": 28
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.consequences"
+      ],
+      "fillIndex": 29
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.sees_use_as_problem.yes",
+        "substance_use.substance_2.problem_yes"
+      ],
+      "fillIndex": 30
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.sees_use_as_problem.no",
+        "substance_use.substance_2.problem_no"
+      ],
+      "fillIndex": 31
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.tried_to_quit.yes",
+        "substance_use.substance_2.tried_to_quit_yes"
+      ],
+      "fillIndex": 32
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.tried_to_quit.no",
+        "substance_use.substance_2.tried_to_quit_no"
+      ],
+      "fillIndex": 33
+    },
+    {
+      "paths": [
+        "substance_use.substance_2.sober_duration"
+      ],
+      "fillIndex": 34
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.age_first_use"
+      ],
+      "fillIndex": 35
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.amount_used"
+      ],
+      "fillIndex": 36
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.frequency_used"
+      ],
+      "fillIndex": 37
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.tolerance"
+      ],
+      "fillIndex": 38
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.method"
+      ],
+      "fillIndex": 39
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.last_use_date"
+      ],
+      "fillIndex": 40
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.days_used_last_30"
+      ],
+      "fillIndex": 41
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.recent_pattern"
+      ],
+      "fillIndex": 42
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.behavioral_changes"
+      ],
+      "fillIndex": 43
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.consequences"
+      ],
+      "fillIndex": 44
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.extra_notes"
+      ],
+      "fillIndex": 45
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.sees_use_as_problem.yes",
+        "substance_use.substance_3.problem_yes"
+      ],
+      "fillIndex": 46
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.sees_use_as_problem.no",
+        "substance_use.substance_3.problem_no"
+      ],
+      "fillIndex": 47
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.tried_to_quit.yes",
+        "substance_use.substance_3.tried_to_quit_yes"
+      ],
+      "fillIndex": 48
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.tried_to_quit.no",
+        "substance_use.substance_3.tried_to_quit_no"
+      ],
+      "fillIndex": 49
+    },
+    {
+      "paths": [
+        "substance_use.substance_3.sober_duration"
+      ],
+      "fillIndex": 50
+    },
+    {
+      "paths": [
+        "substance_use.other_substances"
+      ],
+      "fillIndex": 51
+    },
+    {
+      "paths": [
+        "tobacco.no_history"
+      ],
+      "fillIndex": 52
+    },
+    {
+      "paths": [
+        "tobacco.uses_tobacco_or_vapes.yes",
+        "tobacco.uses_tobacco_or_vapes_yes"
+      ],
+      "fillIndex": 53
+    },
+    {
+      "paths": [
+        "tobacco.uses_tobacco_or_vapes.no",
+        "tobacco.uses_tobacco_or_vapes_no"
+      ],
+      "fillIndex": 54
+    },
+    {
+      "paths": [
+        "tobacco.vape_contains_nicotine.yes",
+        "tobacco.vape_contains_nicotine_yes"
+      ],
+      "fillIndex": 55
+    },
+    {
+      "paths": [
+        "tobacco.vape_contains_nicotine.no",
+        "tobacco.vape_contains_nicotine_no"
+      ],
+      "fillIndex": 56
+    },
+    {
+      "paths": [
+        "tobacco.amount_and_frequency"
+      ],
+      "fillIndex": 57
+    },
+    {
+      "paths": [
+        "tobacco.considers_problem.yes",
+        "tobacco.considers_problem_yes"
+      ],
+      "fillIndex": 58
+    },
+    {
+      "paths": [
+        "tobacco.considers_problem.no",
+        "tobacco.considers_problem_no"
+      ],
+      "fillIndex": 59
+    },
+    {
+      "paths": [
+        "tobacco.wants_to_quit_now.yes",
+        "tobacco.wants_to_quit_now_yes"
+      ],
+      "fillIndex": 60
+    },
+    {
+      "paths": [
+        "tobacco.wants_to_quit_now.no",
+        "tobacco.wants_to_quit_now_no"
+      ],
+      "fillIndex": 61
+    },
+    {
+      "paths": [
+        "tobacco.tried_to_quit_past"
+      ],
+      "fillIndex": 62
+    },
+    {
+      "paths": [
+        "withdrawal.no_history"
+      ],
+      "fillIndex": 63
+    },
+    {
+      "paths": [
+        "withdrawal.experienced_withdrawal.yes",
+        "withdrawal.experienced_withdrawal_yes"
+      ],
+      "fillIndex": 64
+    },
+    {
+      "paths": [
+        "withdrawal.experienced_withdrawal.no",
+        "withdrawal.experienced_withdrawal_no"
+      ],
+      "fillIndex": 65
+    },
+    {
+      "paths": [
+        "withdrawal.symptoms"
+      ],
+      "fillIndex": 66
+    },
+    {
+      "paths": [
+        "withdrawal.seizure_due_to_withdrawal.yes",
+        "withdrawal.seizure_due_to_withdrawal_yes"
+      ],
+      "fillIndex": 67
+    },
+    {
+      "paths": [
+        "withdrawal.seizure_due_to_withdrawal.no",
+        "withdrawal.seizure_due_to_withdrawal_no"
+      ],
+      "fillIndex": 68
+    },
+    {
+      "paths": [
+        "withdrawal.symptom_duration"
+      ],
+      "fillIndex": 69
+    },
+    {
+      "paths": [
+        "withdrawal.onset_after_last_use"
+      ],
+      "fillIndex": 70
+    },
+    {
+      "paths": [
+        "withdrawal.management"
+      ],
+      "fillIndex": 71
+    },
+    {
+      "paths": [
+        "previous_substance_use_treatment.detox_count"
+      ],
+      "fillIndex": 72
+    },
+    {
+      "paths": [
+        "previous_substance_use_treatment.inpatient_residential_count"
+      ],
+      "fillIndex": 73
+    },
+    {
+      "paths": [
+        "previous_substance_use_treatment.outpatient_count"
+      ],
+      "fillIndex": 74
+    },
+    {
+      "paths": [
+        "previous_substance_use_treatment.support_groups_experience.yes",
+        "previous_substance_use_treatment.support_groups_experience_yes"
+      ],
+      "fillIndex": 75
+    },
+    {
+      "paths": [
+        "previous_substance_use_treatment.support_groups_experience.no",
+        "previous_substance_use_treatment.support_groups_experience_no"
+      ],
+      "fillIndex": 76
+    },
+    {
+      "paths": [
+        "previous_substance_use_treatment.sponsor_or_mentor.yes",
+        "previous_substance_use_treatment.sponsor_or_mentor_yes"
+      ],
+      "fillIndex": 77
+    },
+    {
+      "paths": [
+        "previous_substance_use_treatment.sponsor_or_mentor.no",
+        "previous_substance_use_treatment.sponsor_or_mentor_no"
+      ],
+      "fillIndex": 78
+    },
+    {
+      "paths": [
+        "previous_substance_use_treatment.support_group_experience_description"
+      ],
+      "fillIndex": 79
+    },
+    {
+      "paths": [
+        "mental_health.no_history"
+      ],
+      "fillIndex": 80
+    },
+    {
+      "paths": [
+        "mental_health.diagnosis_history"
+      ],
+      "fillIndex": 81
+    },
+    {
+      "paths": [
+        "mental_health.age_diagnosed"
+      ],
+      "fillIndex": 82
+    },
+    {
+      "paths": [
+        "mental_health.diagnosed_by"
+      ],
+      "fillIndex": 83
+    },
+    {
+      "paths": [
+        "mental_health.agrees_with_diagnosis.yes",
+        "mental_health.agrees_with_diagnosis_yes"
+      ],
+      "fillIndex": 84
+    },
+    {
+      "paths": [
+        "mental_health.agrees_with_diagnosis.no",
+        "mental_health.agrees_with_diagnosis_no"
+      ],
+      "fillIndex": 85
+    },
+    {
+      "paths": [
+        "mental_health.using_substances_at_diagnosis"
+      ],
+      "fillIndex": 86
+    },
+    {
+      "paths": [
+        "mental_health.substance_use_impacted_diagnosis"
+      ],
+      "fillIndex": 87
+    },
+    {
+      "paths": [
+        "mental_health_treatment.psychiatric_hospitalizations.yes",
+        "mental_health_treatment.psychiatric_hospitalizations_yes"
+      ],
+      "fillIndex": 88
+    },
+    {
+      "paths": [
+        "mental_health_treatment.psychiatric_hospitalizations.no",
+        "mental_health_treatment.psychiatric_hospitalizations_no"
+      ],
+      "fillIndex": 89
+    },
+    {
+      "paths": [
+        "mental_health_treatment.currently_working_with_psychiatrist.yes",
+        "mental_health_treatment.currently_working_with_psychiatrist_yes"
+      ],
+      "fillIndex": 90
+    },
+    {
+      "paths": [
+        "mental_health_treatment.currently_working_with_psychiatrist.no",
+        "mental_health_treatment.currently_working_with_psychiatrist_no"
+      ],
+      "fillIndex": 91
+    },
+    {
+      "paths": [
+        "mental_health_treatment.currently_working_with_therapist.yes",
+        "mental_health_treatment.currently_working_with_therapist_yes"
+      ],
+      "fillIndex": 92
+    },
+    {
+      "paths": [
+        "mental_health_treatment.currently_working_with_therapist.no",
+        "mental_health_treatment.currently_working_with_therapist_no"
+      ],
+      "fillIndex": 93
+    },
+    {
+      "paths": [
+        "mental_health_treatment.mental_health_professionals_contact"
+      ],
+      "fillIndex": 94
+    },
+    {
+      "paths": [
+        "mental_health_treatment.not_interested_in_resources"
+      ],
+      "fillIndex": 95
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.current_symptoms"
+      ],
+      "fillIndex": 96
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.hallucinations.yes",
+        "symptoms_suicide_self_harm.hallucinations_yes"
+      ],
+      "fillIndex": 97
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.hallucinations.no",
+        "symptoms_suicide_self_harm.hallucinations_no"
+      ],
+      "fillIndex": 98
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.eating_disorder_history"
+      ],
+      "fillIndex": 99
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.current_suicidal_ideation.yes",
+        "symptoms_suicide_self_harm.current_suicidal_ideation_yes"
+      ],
+      "fillIndex": 100
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.current_suicidal_ideation.no",
+        "symptoms_suicide_self_harm.current_suicidal_ideation_no"
+      ],
+      "fillIndex": 101
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.plan_to_end_life.yes",
+        "symptoms_suicide_self_harm.plan_to_end_life_yes"
+      ],
+      "fillIndex": 102
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.plan_to_end_life.no",
+        "symptoms_suicide_self_harm.plan_to_end_life_no"
+      ],
+      "fillIndex": 103
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.means_or_plan_to_obtain_means.yes",
+        "symptoms_suicide_self_harm.means_or_plan_to_obtain_means_yes"
+      ],
+      "fillIndex": 104
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.means_or_plan_to_obtain_means.no",
+        "symptoms_suicide_self_harm.means_or_plan_to_obtain_means_no"
+      ],
+      "fillIndex": 105
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.history_suicidal_ideation.yes",
+        "symptoms_suicide_self_harm.history_suicidal_ideation_yes"
+      ],
+      "fillIndex": 106
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.history_suicidal_ideation.no",
+        "symptoms_suicide_self_harm.history_suicidal_ideation_no"
+      ],
+      "fillIndex": 107
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.suicidal_ideation_life_context"
+      ],
+      "fillIndex": 108
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.suicidal_ideation_dates"
+      ],
+      "fillIndex": 109
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.suicidal_ideation_thoughts"
+      ],
+      "fillIndex": 110
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.history_suicide_attempts.yes",
+        "symptoms_suicide_self_harm.history_suicide_attempts_yes"
+      ],
+      "fillIndex": 111
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.history_suicide_attempts.no",
+        "symptoms_suicide_self_harm.history_suicide_attempts_no"
+      ],
+      "fillIndex": 112
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.attempt_count"
+      ],
+      "fillIndex": 113
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.attempt_dates"
+      ],
+      "fillIndex": 114
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.attempt_methods"
+      ],
+      "fillIndex": 115
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.under_influence_during_attempts"
+      ],
+      "fillIndex": 116
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.feelings_about_past_attempts"
+      ],
+      "fillIndex": 117
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.protective_factors"
+      ],
+      "fillIndex": 118
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.history_self_harm.yes",
+        "symptoms_suicide_self_harm.history_self_harm_yes"
+      ],
+      "fillIndex": 119
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.history_self_harm.no",
+        "symptoms_suicide_self_harm.history_self_harm_no"
+      ],
+      "fillIndex": 120
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.self_harm_dates"
+      ],
+      "fillIndex": 121
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.self_harm_methods"
+      ],
+      "fillIndex": 122
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.feelings_about_past_self_harm"
+      ],
+      "fillIndex": 123
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.access_to_self_harm_means"
+      ],
+      "fillIndex": 124
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.risk_harming_self.yes",
+        "symptoms_suicide_self_harm.risk_harming_self_yes"
+      ],
+      "fillIndex": 125
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.risk_harming_self.no",
+        "symptoms_suicide_self_harm.risk_harming_self_no"
+      ],
+      "fillIndex": 126
+    },
+    {
+      "paths": [
+        "symptoms_suicide_self_harm.risk_harming_self_reason"
+      ],
+      "fillIndex": 127
+    },
+    {
+      "paths": [
+        "trauma_grief.trauma_history.yes",
+        "trauma_grief.trauma_history_yes"
+      ],
+      "fillIndex": 128
+    },
+    {
+      "paths": [
+        "trauma_grief.trauma_history.no",
+        "trauma_grief.trauma_history_no"
+      ],
+      "fillIndex": 129
+    },
+    {
+      "paths": [
+        "trauma_grief.trauma_current_impact"
+      ],
+      "fillIndex": 130
+    },
+    {
+      "paths": [
+        "trauma_grief.interested_in_trauma_treatment"
+      ],
+      "fillIndex": 131
+    },
+    {
+      "paths": [
+        "trauma_grief.current_grief_or_loss"
+      ],
+      "fillIndex": 132
+    },
+    {
+      "paths": [
+        "trauma_grief.grieving_what"
+      ],
+      "fillIndex": 133
+    },
+    {
+      "paths": [
+        "violence.history_violent_behavior.yes",
+        "violence.history_violent_behavior_yes"
+      ],
+      "fillIndex": 134
+    },
+    {
+      "paths": [
+        "violence.history_violent_behavior.no",
+        "violence.history_violent_behavior_no"
+      ],
+      "fillIndex": 135
+    },
+    {
+      "paths": [
+        "violence.current_thoughts_hurting_others.yes",
+        "violence.current_thoughts_hurting_others_yes"
+      ],
+      "fillIndex": 136
+    },
+    {
+      "paths": [
+        "violence.current_thoughts_hurting_others.no",
+        "violence.current_thoughts_hurting_others_no"
+      ],
+      "fillIndex": 137
+    },
+    {
+      "paths": [
+        "violence.perpetrator_domestic_abuse.yes",
+        "violence.perpetrator_domestic_abuse_yes"
+      ],
+      "fillIndex": 138
+    },
+    {
+      "paths": [
+        "violence.perpetrator_domestic_abuse.no",
+        "violence.perpetrator_domestic_abuse_no"
+      ],
+      "fillIndex": 139
+    },
+    {
+      "paths": [
+        "violence.current_risk_for_violence.yes",
+        "violence.current_risk_for_violence_yes"
+      ],
+      "fillIndex": 140
+    },
+    {
+      "paths": [
+        "violence.current_risk_for_violence.no",
+        "violence.current_risk_for_violence_no"
+      ],
+      "fillIndex": 141
+    },
+    {
+      "paths": [
+        "violence.violence_risk_reason"
+      ],
+      "fillIndex": 142
+    },
+    {
+      "paths": [
+        "legal.lifetime_arrest_count"
+      ],
+      "fillIndex": 143
+    },
+    {
+      "paths": [
+        "legal.sex_crime_conviction"
+      ],
+      "fillIndex": 144
+    },
+    {
+      "paths": [
+        "legal.arrest_results"
+      ],
+      "fillIndex": 145
+    },
+    {
+      "paths": [
+        "legal.current_warrants.yes",
+        "legal.current_warrants_yes"
+      ],
+      "fillIndex": 146
+    },
+    {
+      "paths": [
+        "legal.current_warrants.no",
+        "legal.current_warrants_no"
+      ],
+      "fillIndex": 147
+    },
+    {
+      "paths": [
+        "legal.probation_or_parole.yes",
+        "legal.probation_or_parole_yes"
+      ],
+      "fillIndex": 148
+    },
+    {
+      "paths": [
+        "legal.probation_or_parole.no",
+        "legal.probation_or_parole_no"
+      ],
+      "fillIndex": 149
+    },
+    {
+      "paths": [
+        "family.mother_living.yes",
+        "family.mother_living_yes"
+      ],
+      "fillIndex": 150
+    },
+    {
+      "paths": [
+        "family.mother_living.no",
+        "family.mother_living_no"
+      ],
+      "fillIndex": 151
+    },
+    {
+      "paths": [
+        "family.mother_deceased_details"
+      ],
+      "fillIndex": 152
+    },
+    {
+      "paths": [
+        "family.mother_relationship"
+      ],
+      "fillIndex": 153
+    },
+    {
+      "paths": [
+        "family.mother_medical_history"
+      ],
+      "fillIndex": 154
+    },
+    {
+      "paths": [
+        "family.mother_mental_health_history"
+      ],
+      "fillIndex": 155
+    },
+    {
+      "paths": [
+        "family.mother_substance_abuse_history"
+      ],
+      "fillIndex": 156
+    },
+    {
+      "paths": [
+        "family.father_living.yes",
+        "family.father_living_yes"
+      ],
+      "fillIndex": 157
+    },
+    {
+      "paths": [
+        "family.father_living.no",
+        "family.father_living_no"
+      ],
+      "fillIndex": 158
+    },
+    {
+      "paths": [
+        "family.father_deceased_details"
+      ],
+      "fillIndex": 159
+    },
+    {
+      "paths": [
+        "family.father_relationship"
+      ],
+      "fillIndex": 160
+    },
+    {
+      "paths": [
+        "family.father_medical_history"
+      ],
+      "fillIndex": 161
+    },
+    {
+      "paths": [
+        "family.father_mental_health_history"
+      ],
+      "fillIndex": 162
+    },
+    {
+      "paths": [
+        "family.father_substance_abuse_history"
+      ],
+      "fillIndex": 163
+    },
+    {
+      "paths": [
+        "family.has_siblings.yes",
+        "family.has_siblings_yes"
+      ],
+      "fillIndex": 164
+    },
+    {
+      "paths": [
+        "family.has_siblings.no",
+        "family.has_siblings_no"
+      ],
+      "fillIndex": 165
+    },
+    {
+      "paths": [
+        "family.growing_up_experience"
+      ],
+      "fillIndex": 166
+    },
+    {
+      "paths": [
+        "spiritual_cultural.religion_affiliation"
+      ],
+      "fillIndex": 167
+    },
+    {
+      "paths": [
+        "spiritual_cultural.active_in_religion"
+      ],
+      "fillIndex": 168
+    },
+    {
+      "paths": [
+        "spiritual_cultural.culture_values_raised_with"
+      ],
+      "fillIndex": 169
+    },
+    {
+      "paths": [
+        "spiritual_cultural.childhood_socioeconomic_status"
+      ],
+      "fillIndex": 170
+    },
+    {
+      "paths": [
+        "medical.current_physical_health_problems"
+      ],
+      "fillIndex": 171
+    },
+    {
+      "paths": [
+        "medical.pain_issues.yes",
+        "medical.pain_issues_yes"
+      ],
+      "fillIndex": 172
+    },
+    {
+      "paths": [
+        "medical.pain_issues.no",
+        "medical.pain_issues_no"
+      ],
+      "fillIndex": 173
+    },
+    {
+      "paths": [
+        "medical.pain_location"
+      ],
+      "fillIndex": 174
+    },
+    {
+      "paths": [
+        "medical.pain_start"
+      ],
+      "fillIndex": 175
+    },
+    {
+      "paths": [
+        "medical.pain_helpers"
+      ],
+      "fillIndex": 176
+    },
+    {
+      "paths": [
+        "medical.pain_functioning_impact"
+      ],
+      "fillIndex": 177
+    },
+    {
+      "paths": [
+        "medical.used_opiates_for_pain"
+      ],
+      "fillIndex": 178
+    },
+    {
+      "paths": [
+        "medical.opiates_prescribed"
+      ],
+      "fillIndex": 179
+    },
+    {
+      "paths": [
+        "medical.abused_opiates"
+      ],
+      "fillIndex": 180
+    },
+    {
+      "paths": [
+        "medical.has_primary_care"
+      ],
+      "fillIndex": 181
+    },
+    {
+      "paths": [
+        "medical.primary_care_clinic_or_doctor",
+        "medical.primary_care_clinic"
+      ],
+      "fillIndex": 182
+    },
+    {
+      "paths": [
+        "medical.primary_care_doctor_name",
+        "medical.primary_care_doctor_contact"
+      ],
+      "fillIndex": 183
+    },
+    {
+      "paths": [
+        "medical.last_full_physical"
+      ],
+      "fillIndex": 184
+    },
+    {
+      "paths": [
+        "medical.more_than_one_year_since_physical.yes",
+        "medical.more_than_one_year_since_physical_yes"
+      ],
+      "fillIndex": 185
+    },
+    {
+      "paths": [
+        "medical.more_than_one_year_since_physical.no",
+        "medical.more_than_one_year_since_physical_no"
+      ],
+      "fillIndex": 186
+    },
+    {
+      "paths": [
+        "medical.allergies.yes",
+        "medical.allergies_yes"
+      ],
+      "fillIndex": 187
+    },
+    {
+      "paths": [
+        "medical.allergies.no",
+        "medical.allergies_no"
+      ],
+      "fillIndex": 188
+    },
+    {
+      "paths": [
+        "medical.allergy_reaction"
+      ],
+      "fillIndex": 189
+    },
+    {
+      "paths": [
+        "medical.has_or_needs_epipen"
+      ],
+      "fillIndex": 190
+    },
+    {
+      "paths": [
+        "medical.dental_problems.yes",
+        "medical.dental_problems_yes"
+      ],
+      "fillIndex": 191
+    },
+    {
+      "paths": [
+        "medical.dental_problems.no",
+        "medical.dental_problems_no"
+      ],
+      "fillIndex": 192
+    },
+    {
+      "paths": [
+        "medical.dentist_next_plan"
+      ],
+      "fillIndex": 193
+    },
+    {
+      "paths": [
+        "medications.medication_1.name"
+      ],
+      "fillIndex": 194
+    },
+    {
+      "paths": [
+        "medications.medication_1.dosage_frequency"
+      ],
+      "fillIndex": 195
+    },
+    {
+      "paths": [
+        "medications.medication_1.side_effects"
+      ],
+      "fillIndex": 196
+    },
+    {
+      "paths": [
+        "medications.medication_1.currently_taking.yes",
+        "medications.medication_1.currently_taking_yes"
+      ],
+      "fillIndex": 197
+    },
+    {
+      "paths": [
+        "medications.medication_1.currently_taking.no",
+        "medications.medication_1.currently_taking_no"
+      ],
+      "fillIndex": 198
+    },
+    {
+      "paths": [
+        "medications.medication_1.mixed_with_alcohol_or_drugs.yes",
+        "medications.medication_1.mixed_with_alcohol_or_drugs_yes"
+      ],
+      "fillIndex": 199
+    },
+    {
+      "paths": [
+        "medications.medication_1.mixed_with_alcohol_or_drugs.no",
+        "medications.medication_1.mixed_with_alcohol_or_drugs_no"
+      ],
+      "fillIndex": 200
+    },
+    {
+      "paths": [
+        "medications.medication_2.name"
+      ],
+      "fillIndex": 201
+    },
+    {
+      "paths": [
+        "medications.medication_2.dosage_frequency"
+      ],
+      "fillIndex": 202
+    },
+    {
+      "paths": [
+        "medications.medication_2.side_effects"
+      ],
+      "fillIndex": 203
+    },
+    {
+      "paths": [
+        "medications.medication_2.currently_taking.yes",
+        "medications.medication_2.currently_taking_yes"
+      ],
+      "fillIndex": 204
+    },
+    {
+      "paths": [
+        "medications.medication_2.currently_taking.no",
+        "medications.medication_2.currently_taking_no"
+      ],
+      "fillIndex": 205
+    },
+    {
+      "paths": [
+        "medications.medication_2.mixed_with_alcohol_or_drugs.yes",
+        "medications.medication_2.mixed_with_alcohol_or_drugs_yes"
+      ],
+      "fillIndex": 206
+    },
+    {
+      "paths": [
+        "medications.medication_2.mixed_with_alcohol_or_drugs.no",
+        "medications.medication_2.mixed_with_alcohol_or_drugs_no"
+      ],
+      "fillIndex": 207
+    },
+    {
+      "paths": [
+        "medications.medication_3.name"
+      ],
+      "fillIndex": 208
+    },
+    {
+      "paths": [
+        "medications.medication_3.dosage_frequency"
+      ],
+      "fillIndex": 209
+    },
+    {
+      "paths": [
+        "medications.medication_3.side_effects"
+      ],
+      "fillIndex": 210
+    },
+    {
+      "paths": [
+        "medications.medication_3.currently_taking.yes",
+        "medications.medication_3.currently_taking_yes"
+      ],
+      "fillIndex": 211
+    },
+    {
+      "paths": [
+        "medications.medication_3.currently_taking.no",
+        "medications.medication_3.currently_taking_no"
+      ],
+      "fillIndex": 212
+    },
+    {
+      "paths": [
+        "medications.medication_3.mixed_with_alcohol_or_drugs.yes",
+        "medications.medication_3.mixed_with_alcohol_or_drugs_yes"
+      ],
+      "fillIndex": 213
+    },
+    {
+      "paths": [
+        "medications.medication_3.mixed_with_alcohol_or_drugs.no",
+        "medications.medication_3.mixed_with_alcohol_or_drugs_no"
+      ],
+      "fillIndex": 214
+    },
+    {
+      "paths": [
+        "sexual_history.practices_safe_sex.yes",
+        "sexual_history.practices_safe_sex_yes"
+      ],
+      "fillIndex": 215
+    },
+    {
+      "paths": [
+        "sexual_history.practices_safe_sex.no",
+        "sexual_history.practices_safe_sex_no"
+      ],
+      "fillIndex": 216
+    },
+    {
+      "paths": [
+        "sexual_history.practices_safe_sex.sometimes",
+        "sexual_history.practices_safe_sex_sometimes"
+      ],
+      "fillIndex": 217
+    },
+    {
+      "paths": [
+        "sexual_history.partners_last_year"
+      ],
+      "fillIndex": 218
+    },
+    {
+      "paths": [
+        "sexual_history.blackouts_prior_to_sex.yes",
+        "sexual_history.blackouts_prior_to_sex_yes"
+      ],
+      "fillIndex": 219
+    },
+    {
+      "paths": [
+        "sexual_history.blackouts_prior_to_sex.no",
+        "sexual_history.blackouts_prior_to_sex_no"
+      ],
+      "fillIndex": 220
+    },
+    {
+      "paths": [
+        "sexual_history.paid_or_been_paid_for_sex.yes_paid",
+        "sexual_history.paid_or_been_paid_for_sex_yes_paid"
+      ],
+      "fillIndex": 221
+    },
+    {
+      "paths": [
+        "sexual_history.paid_or_been_paid_for_sex.yes_been_paid",
+        "sexual_history.paid_or_been_paid_for_sex_yes_been_paid"
+      ],
+      "fillIndex": 222
+    },
+    {
+      "paths": [
+        "sexual_history.paid_or_been_paid_for_sex.never",
+        "sexual_history.paid_or_been_paid_for_sex_never"
+      ],
+      "fillIndex": 223
+    },
+    {
+      "paths": [
+        "sexual_history.substance_use_impacted_sex_life"
+      ],
+      "fillIndex": 224
+    },
+    {
+      "paths": [
+        "sexual_history.tested_std_hepatitis_hiv.yes",
+        "sexual_history.tested_std_hepatitis_hiv_yes"
+      ],
+      "fillIndex": 225
+    },
+    {
+      "paths": [
+        "sexual_history.tested_std_hepatitis_hiv.no",
+        "sexual_history.tested_std_hepatitis_hiv_no"
+      ],
+      "fillIndex": 226
+    },
+    {
+      "paths": [
+        "sexual_history.wants_sexual_health_resources_if_no.yes",
+        "sexual_history.wants_sexual_health_resources_if_no_yes"
+      ],
+      "fillIndex": 227
+    },
+    {
+      "paths": [
+        "sexual_history.wants_sexual_health_resources_if_no.no",
+        "sexual_history.wants_sexual_health_resources_if_no_no"
+      ],
+      "fillIndex": 228
+    },
+    {
+      "paths": [
+        "sexual_history.additional_notes"
+      ],
+      "fillIndex": 229
+    },
+    {
+      "paths": [
+        "vocational.looking_for_work.yes",
+        "vocational.looking_for_work_yes"
+      ],
+      "fillIndex": 230
+    },
+    {
+      "paths": [
+        "vocational.looking_for_work.no",
+        "vocational.looking_for_work_no"
+      ],
+      "fillIndex": 231
+    },
+    {
+      "paths": [
+        "vocational.employment_start_date"
+      ],
+      "fillIndex": 232
+    },
+    {
+      "paths": [
+        "vocational.hourly_wage_or_annual_income"
+      ],
+      "fillIndex": 233
+    },
+    {
+      "paths": [
+        "vocational.full_time_or_part_time"
+      ],
+      "fillIndex": 234
+    },
+    {
+      "paths": [
+        "vocational.persons_living_on_income"
+      ],
+      "fillIndex": 235
+    },
+    {
+      "paths": [
+        "vocational.financial_state"
+      ],
+      "fillIndex": 236
+    },
+    {
+      "paths": [
+        "vocational.trouble_at_work_due_to_substance_use"
+      ],
+      "fillIndex": 237
+    },
+    {
+      "paths": [
+        "educational.liked_school_when_younger"
+      ],
+      "fillIndex": 238
+    },
+    {
+      "paths": [
+        "educational.diagnosed_learning_disabilities"
+      ],
+      "fillIndex": 239
+    },
+    {
+      "paths": [
+        "educational.clubs_or_sports"
+      ],
+      "fillIndex": 240
+    },
+    {
+      "paths": [
+        "educational.substance_use_interfered_with_school"
+      ],
+      "fillIndex": 241
+    },
+    {
+      "paths": [
+        "military.active_duty"
+      ],
+      "fillIndex": 242
+    },
+    {
+      "paths": [
+        "military.deployed"
+      ],
+      "fillIndex": 243
+    },
+    {
+      "paths": [
+        "military.highest_rank"
+      ],
+      "fillIndex": 244
+    },
+    {
+      "paths": [
+        "military.discharge_status"
+      ],
+      "fillIndex": 245
+    },
+    {
+      "paths": [
+        "military.substance_use_interfered_with_military"
+      ],
+      "fillIndex": 246
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.relationship_length",
+        "current.relationship_length"
+      ],
+      "fillIndex": 247
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.relationship_description",
+        "current.relationship_description"
+      ],
+      "fillIndex": 248
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.substance_use_impacted_relationship"
+      ],
+      "fillIndex": 249
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.partner_uses_substances"
+      ],
+      "fillIndex": 250
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.substances_in_partner_living_space"
+      ],
+      "fillIndex": 251
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.children_count_and_location",
+        "current.children_count"
+      ],
+      "fillIndex": 252
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.cps_involvement"
+      ],
+      "fillIndex": 253
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.cps_case_details"
+      ],
+      "fillIndex": 254
+    },
+    {
+      "paths": [
+        "current_marital_status_and_living_environment.recovery_support_people",
+        "current.recovery_support_people"
+      ],
+      "fillIndex": 255
+    },
+    {
+      "paths": [
+        "hobbies_activities.fun_activities"
+      ],
+      "fillIndex": 256
+    },
+    {
+      "paths": [
+        "hobbies_activities.substance_use_impacted_activities.yes",
+        "hobbies_activities.substance_use_impacted_activities_yes"
+      ],
+      "fillIndex": 257
+    },
+    {
+      "paths": [
+        "hobbies_activities.substance_use_impacted_activities.no",
+        "hobbies_activities.substance_use_impacted_activities_no"
+      ],
+      "fillIndex": 258
+    },
+    {
+      "paths": [
+        "additional_addiction_questions.gambling_concerns"
+      ],
+      "fillIndex": 259
+    },
+    {
+      "paths": [
+        "additional_addiction_questions.spending_or_impulsive_spending_concerns"
+      ],
+      "fillIndex": 260
+    },
+    {
+      "paths": [
+        "additional_addiction_questions.technology_use_concerns"
+      ],
+      "fillIndex": 261
+    },
+    {
+      "paths": [
+        "strengths_challenges.personal_challenge"
+      ],
+      "fillIndex": 262
+    },
+    {
+      "paths": [
+        "strengths_challenges.personal_strengths"
+      ],
+      "fillIndex": 263
+    }
+  ],
+  "notes": [
+    "ReliaTrax does not expose stable friendly field names, so this maps by DOM order.",
+    "Education highest education, military history/status, and current marital status use Rose's repurposed-field mappings and runtime defaults.",
+    "Only update fieldMap when a fresh live snapshot confirms the DOM order changed.",
+    "v0.3.0 adds editable defaultAnswers array. The extension applies Rose's built-in rules first, then uses this array for local overrides and extra site-specific defaults.",
+    "Troubleshooting trace logs include field indexes, DOM metadata, matched data path, data source, previous value, and written value. Treat logs as sensitive when live client data is present."
+  ],
+  "defaultAnswerMode": "fill_blanks",
+  "defaultAnswers": []
+}
