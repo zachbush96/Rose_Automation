@@ -1,7 +1,7 @@
 {
   "project": "Rose ReliaTrax BPS Automation",
   "version": "0.3.0",
-  "updated": "2026-05-18",
+  "updated": "2026-05-19",
   "selector": "textarea.qn-textarea, input.qn-editable-cb",
   "expectedFieldCount": 264,
   "defaultsOverwriteExisting": true,
@@ -1736,5 +1736,146 @@
     "Troubleshooting trace logs include field indexes, DOM metadata, matched data path, data source, previous value, and written value. Treat logs as sensitive when live client data is present."
   ],
   "defaultAnswerMode": "fill_blanks",
-  "defaultAnswers": []
+  "defaultAnswers": [
+    {
+      "question": "living_situation.referral_source",
+      "answer": "Self-referral"
+    },
+    {
+      "question": "withdrawal.seizure_due_to_withdrawal.no",
+      "answer": true
+    },
+    {
+      "question": "previous_substance_use_treatment.sponsor_or_mentor.no",
+      "answer": true
+    },
+    {
+      "question": "mental_health.diagnosed_by",
+      "answer": "Unknown"
+    },
+    {
+      "question": "mental_health_treatment.not_interested_in_resources",
+      "answer": false
+    },
+    {
+      "question": "symptoms_suicide_self_harm.plan_to_end_life.no",
+      "answer": true
+    },
+    {
+      "question": "symptoms_suicide_self_harm.means_or_plan_to_obtain_means.no",
+      "answer": true
+    },
+    {
+      "question": "symptoms_suicide_self_harm.access_to_self_harm_means",
+      "answer": "n/a"
+    },
+    {
+      "question": "violence.current_thoughts_hurting_others.no",
+      "answer": true
+    },
+    {
+      "question": "legal.sex_crime_conviction",
+      "answer": "No"
+    },
+    {
+      "question": "family.mother_medical_history",
+      "answer": "No"
+    },
+    {
+      "question": "family.mother_mental_health_history",
+      "answer": "No"
+    },
+    {
+      "question": "family.mother_substance_abuse_history",
+      "answer": "No"
+    },
+    {
+      "question": "family.father_medical_history",
+      "answer": "No"
+    },
+    {
+      "question": "family.father_mental_health_history",
+      "answer": "No"
+    },
+    {
+      "question": "family.father_substance_abuse_history",
+      "answer": "No"
+    },
+    {
+      "question": "family.has_siblings.yes",
+      "answer": true
+    },
+    {
+      "question": "medical.used_opiates_for_pain",
+      "answer": "No"
+    },
+    {
+      "question": "sexual_history.practices_safe_sex.yes",
+      "answer": true
+    },
+    {
+      "question": "sexual_history.partners_last_year",
+      "answer": "Information not provided"
+    },
+    {
+      "question": "sexual_history.blackouts_prior_to_sex.no",
+      "answer": true
+    },
+    {
+      "question": "sexual_history.paid_or_been_paid_for_sex.never",
+      "answer": true
+    },
+    {
+      "question": "sexual_history.substance_use_impacted_sex_life",
+      "answer": "Information not provided"
+    },
+    {
+      "question": "vocational.persons_living_on_income",
+      "answer": "Self"
+    },
+    {
+      "question": "educational.clubs_or_sports",
+      "answer": "No"
+    },
+    {
+      "question": "military.active_duty",
+      "answer": "n/a"
+    },
+    {
+      "question": "military.deployed",
+      "answer": "n/a"
+    },
+    {
+      "question": "military.highest_rank",
+      "answer": "n/a"
+    },
+    {
+      "question": "military.discharge_status",
+      "answer": "n/a"
+    },
+    {
+      "question": "military.substance_use_interfered_with_military",
+      "answer": "n/a"
+    },
+    {
+      "question": "current_marital_status_and_living_environment.partner_uses_substances",
+      "answer": "Information not provided"
+    },
+    {
+      "question": "current_marital_status_and_living_environment.substances_in_partner_living_space",
+      "answer": "n/a"
+    },
+    {
+      "question": "additional_addiction_questions.gambling_concerns",
+      "answer": "No"
+    },
+    {
+      "question": "additional_addiction_questions.spending_or_impulsive_spending_concerns",
+      "answer": "No"
+    },
+    {
+      "question": "additional_addiction_questions.technology_use_concerns",
+      "answer": "No"
+    }
+  ]
 }
