@@ -1,0 +1,60 @@
+{
+  "project": "Rose ReliaTrax Workflow Modes",
+  "version": "0.1.0",
+  "updated": "2026-05-26",
+  "modes": {
+    "bps": {
+      "title": "BPS Part 1",
+      "description": "Current production workflow for BPS Part 1.",
+      "configUrl": "https://raw.githubusercontent.com/zachbush96/Rose_Automation/refs/heads/main/rose-reliatrax-bps-config.json"
+    },
+    "mse": {
+      "title": "MSE Part 2",
+      "description": "Rose emailed the current MSE source prompt on 2026-05-25. Use Discovery and Mapping before building fill support.",
+      "sourcePrompt": {
+        "title": "Part 2 MSE source prompt",
+        "source": "Rose Gmail 19e62244b6e326bf, 2026-05-25 9:36 PM Central",
+        "body": "You are creating a Biopsychosocial (BPS) assessment based on the transcript provided.\n\nComplete every Mental Health Status Exam item separately. Do not skip, combine, or summarize items. If information is limited, use clinical inference when appropriate or write Information not provided.\n\nRequired MSE items: Attitude Toward Examiner; Attitude Toward Parent/Guardian; Separation (children/adolescents); Mood; Affect; Speech; Thought Process; Perception; Hallucinations; Thought Content; Delusions; Cognition (attention, abstraction, orientation, memory, etc.); Intelligence Estimate; Insight; Judgment.\n\nPhone assessment rule: do not infer visual presentation during phone assessments. For non-observable visual items, use Other: Unknown - interview conducted via phone.\n\nUse conservative clinical logic. Prefer WNL/default checkbox selections plus Other narrative when additional context is clinically useful. If Other is selected, the matching narrative field must be populated with complete clinical sentences.\n\nUse the client first name, third person, professional clinical language, and no em dashes. Output only the assessment content."
+      }
+    },
+    "asam": {
+      "title": "Case Management and ASAM Part 3",
+      "description": "Rose emailed current Case Management scoring and ASAM source prompts on 2026-05-25. Field mapping is still pending.",
+      "sourcePrompt": {
+        "title": "Part 3 Case Management and ASAM source prompts",
+        "source": "Rose Gmail 19e6226123de9ae7, 2026-05-25 9:38 PM Central",
+        "body": "Prompt 1 for the numbers at the top:\n\nCreate the MSE and Case Management Assessment from the transcript. Mirror the form structure exactly. Each Case Management category must use this format:\n\n<Category>: <0-3> (<None/Mild/Moderate/Severe>) - <one sentence>\n\nScore Housing, Financial Stressors, Legal, Employment, Education/Vocation, Independent Living, Medical, and Social/Natural Supports. Use 0 None, 1 Mild, 2 Moderate, 3 Severe. Do not use paragraphs, multiple sentences, or custom wording for the score lines.\n\nPrompt 2 for ASAM:\n\nComplete ASAM Dimensions 1-6. Each dimension must include severity number and matching label: 0 None, 1 Mild, 2 Moderate, 3 High, 4 Severe. Each dimension needs 2-4 sentences with clinical justification, functional impact, and risk implications. Ratings must support the recommended level of care and must not inflate or minimize severity.\n\nAlso complete safety planning, assessment summary, clinical recommendations, DSM V SUD-only diagnosis, level of care, estimated length of care, and estimated discharge date using the same alignment rules as the Diagnostics source prompt."
+      }
+    },
+    "diagnostics": {
+      "title": "Diagnostics Part 4",
+      "description": "Rose emailed the current Diagnostics / Clinical Impressions source prompt on 2026-05-25. Field mapping is still pending.",
+      "sourcePrompt": {
+        "title": "Part 4 Diagnostics / Clinical Impressions source prompt",
+        "source": "Rose Gmail 19e62280dbcee9a0, 2026-05-25 9:40 PM Central",
+        "body": "You are completing a Biopsychosocial Assessment (BPS) Part 2, Part 3, and Part 4 based on the transcript provided.\n\nEach section header must appear exactly as written and on its own line. The content for that section must begin after exactly one blank line. Use single line breaks, clean clinical formatting, third person, client first name, and no em dashes.\n\nComplete all six ASAM dimensions with severity number/label, clinical justification, functional impact, and risk implications. Use 0 None, 1 Mild, 2 Moderate, 3 High, 4 Severe.\n\nSafety planning must answer whether additional safety planning is needed and why, referencing SI/HI, withdrawal risk, medical concerns, self-harm, violence, relapse risk, psychiatric instability, environmental concerns, or lack thereof.\n\nAssessment Summary must be 4-5 individualized clinical paragraphs. It must align with ASAM severity, DSM V, clinical recommendations, and level of care. Do not use bullets or mini-headers.\n\nClinical Recommendations must select only appropriate options from Group, Individual, Mental Health, Medical, Case Management, Peer Coaching, Coordination with Other Providers, and Other Services. Other Services must be concise phrases separated by semicolons when selected.\n\nDSM V is strict: include only Substance Use Disorder diagnoses supported by the transcript, with DSM-5 wording and F codes when possible. Do not include PTSD, depression, anxiety, bipolar disorder, adjustment disorder, personality disorders, medical diagnoses, grief, housing, legal, or psychosocial stressors.\n\nLevel of Care must match ASAM severity and use the least restrictive appropriate level. Sober living is not level of care. Outpatient or IOP uses 90 days and an estimated discharge month/year approximately 3 months from assessment. Detox uses 7-10 days plus follow-up outpatient/IOP. Higher LOC uses TBD. No SUD uses referral-out and 30 days."
+      }
+    },
+    "treatment": {
+      "title": "Treatment Plan",
+      "description": "Rose emailed Treatment Plan rules on 2026-05-23. Field mapping is still pending.",
+      "sourcePrompt": {
+        "title": "Treatment Plan source prompt",
+        "source": "Rose Gmail 19e55f2a19ecdd27, 2026-05-23 12:46 PM Central",
+        "body": "Create a Treatment Plan based on the transcript provided. This treatment plan form is separate from the BPS and Diagnostic/Clinical Impressions form.\n\nUse exact copy/paste-ready EHR formatting. Every section header appears alone on its own line, followed by exactly one blank line before content. Use professional clinical language, third person, the client first name, and no em dashes. Do not use bullets except for the required numbered Objective and Therapeutic Intervention lists.\n\nAssessment Date must exactly copy Date of Service Plan.\n\nStrengths must be one individualized 4-6 sentence clinical paragraph. Risk Factors must be one individualized 5-8 sentence paragraph supporting medical necessity when applicable.\n\nEach problem must contain exactly 1 Goal, 3 Objectives, and 3 Therapeutic Interventions. Objectives and Therapeutic Interventions must be numbered 1. 2. 3., each as one complete sentence. Therapeutic Interventions should usually begin with Clinician will.\n\nReview/Comments should be left blank unless specifically instructed."
+      }
+    },
+    "quicknotes": {
+      "title": "QuickNotes / Group Notes",
+      "description": "Fill Rose QuickNotes / Group Notes from the 2026-05-25 discovery map.",
+      "configUrl": "https://raw.githubusercontent.com/zachbush96/Rose_Automation/refs/heads/main/rose-quicknotes-config.json"
+    },
+    "discovery": {
+      "title": "Discovery and Mapping",
+      "description": "Scan unknown ReliaTrax or similar forms and export a mapping package for Zach."
+    }
+  },
+  "releaseNotes": [
+    "v0.1.0 keeps workflow-mode labels, source prompts, and per-mode remote config URLs outside sidepanel.js."
+  ]
+}
